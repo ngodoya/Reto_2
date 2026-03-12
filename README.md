@@ -16,7 +16,7 @@ Planteamiento: Pokemon es un juego excesivamente complejo, en esta práctica bus
     * Resistencia
 * Trainer: Un entrenador es como el *"Jugador"*
 * Pokeball: Objeto esencial para cazar y obtener Pokemons en el juego, tienen rarezas y incluso estádisticas para atrapar.
-* Battle: En esencia las batallas son interacciones entre dos entredores, en algunos juegos suele haber más de 2 entrenadores, en este caso para simplificar, una batalla solo va a tener dos pokemons simultaneos.
+* Battle: En esencia las batallas son interacciones entre dos entrenadores, en algunos juegos suele haber más de 2 entrenadores, en este caso para simplificar, una batalla solo va a tener dos pokemons simultaneos.
 ---
 ## Relación Jugador - Juego
 ```mermaid
@@ -74,10 +74,10 @@ Battle "1" --> "2" Trainer
 Namespace sirve para asignar zonas de trabajo separar areas en la arquitectura de un UML, usarla en este caso no es necesario pero en casos más complejos con diagramas mucho más elaborados sirve para entender y agrupar que clases trabajan en una misma área.
 ## Ejemplos de Herencia
 Importante darnos cuenta que aunque nuestro diagrama UML es muy básico sería bueno resaltar lo que dijimos, existen los tipos de Pokemon, podemos utilizar la propiedad de la herencia en este caso con ejemplos como:
-* Bulbasur **es un** Pokemon
-* Pidgeott **es un** Pokemon
-* Charmander **es un** Pokemon
-* Squirtle **es un** Pokemon
+* Pokemon de Fuego **es un TIPO de** Pokemon
+* Pokemon de Tierra **es un TIPO de** Pokemon
+* Pokemon de Agua **es un TIPO de** Pokemon
+* Pokemon de Aire **es un TIPO de** Pokemon
 
 Note que son tipos de pokemon, aquí es donde entra los pokemon tipo fuego, tierra, agua, luz, etc
 ```mermaid
@@ -99,11 +99,11 @@ class Pokemon {
 
 
 
-TypeFire "1" --|> "1" Pokemon
-TypeWater "1" --|> "1" Pokemon
-TypeElectric "1" --|> "1" Pokemon
-TypeDragon "1" --|> "1" Pokemon
-TypeGrass "1" --|> "1" Pokemon
-TypePoison "1" --|> "1" Pokemon
+TypeFire --|> Pokemon
+TypeWater --|> Pokemon
+TypeElectric --|> Pokemon
+TypeDragon --|> Pokemon
+TypeGrass --|> Pokemon
+TypePoison --|> Pokemon
 
 ```
