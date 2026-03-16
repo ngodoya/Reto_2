@@ -24,42 +24,42 @@ classDiagram
 direction TB
 namespace PokemonWork {
     class Pokemon {
-        +string name
-        +string type
-        +int level
-        +bool is_fainted
-        +float hp
-        +int attack
-        +int defense
-        +int speed
+        -string name
+        -string type
+        -int level
+        -bool is_fainted
+        -float hp
+        -int attack
+        -int defense
+        -int speed
         +attack()
         +receive_damage()
         +heal()
     }
 
     class Pokeball {
-        +string type
-        +bool used
-        +float catch_rate
+        -string type
+        -bool used
+        -float catch_rate
         +throw()
         +capture_pokemon()
     }
 }
 class Trainer {
-    +int age
-    +string gender
-    +list pokemons
-    +list badges
-    +int pokeballs
+    -int age
+    -string gender
+    -list pokemons
+    -list badges
+    -int pokeballs
     +catch_pokemon()
     +release_pokemon()
     +choose_pokemon()
 }
 
 class Battle {
-    +Pokemon pokemon1
-    +Pokemon pokemon2
-    +int turn
+    -Pokemon pokemon1
+    -Pokemon pokemon2
+    -int turn
     +start_battle()
     +attack_turn()
     +check_winner()
