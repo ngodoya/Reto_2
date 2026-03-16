@@ -84,14 +84,14 @@ Note que son tipos de pokemon, aquí es donde entra los pokemon tipo fuego, tier
 classDiagram
 direction BT
 class Pokemon {
-    +string name
-    +string type
-    +int level
-    +bool is_fainted
-    +float hp
-    +int attack
-    +int defense
-    +int speed
+    -string name
+    -string type
+    -int level
+    -bool is_fainted
+    -float hp
+    -int attack
+    -int defense
+    -int speed
     +attack()
     +receive_damage()
     +heal()
